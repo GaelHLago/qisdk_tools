@@ -121,4 +121,13 @@ class qiHelper {
                 .buildAsync()
 
     }
+
+    fun say(qiContext: QiContext, sentence : String) : Future<Void>{
+        return SayBuilder.with(qiContext)
+                .withText(sentence)
+                .buildAsync().andThenConsume {
+                    say ->
+                    say.async().run()
+                }
+    }
 }
