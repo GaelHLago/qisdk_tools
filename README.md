@@ -7,6 +7,7 @@ qiHelper class is a wrapper for actions :
 - LocalizeAndMap
 - Localize
 - GoTo
+- Say
 
 All actions are asynchronous.
 
